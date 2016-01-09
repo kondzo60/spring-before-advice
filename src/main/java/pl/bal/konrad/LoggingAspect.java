@@ -1,11 +1,18 @@
 package pl.bal.konrad;
 
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 
 public class LoggingAspect {
+	private Logger logger = Logger.getLogger(this.getClass().getName());
 	
 	public void logExecution(){
-		Logger.getLogger(this.getClass().getName()).info("Method logExecution() ");
+		logger.info("Method logExecution() ");
+	}
+	
+	public void warnIfNull(Object returnedValue){
+		if(returnedValue == null)
+			logger.warn("Zwracana wartosc jest nullem");
+		
 	}
 
 }

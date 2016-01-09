@@ -9,5 +9,4 @@ public class CustomerRepoImpl implements CustomerRepository {
 	public String getCustomername(long customerId) {
 		return "Konrad";
 	}
-
 }
